@@ -1,0 +1,85 @@
+import java.util.*;
+public class AssignmentTwo{
+	public void Change(int i)
+	{
+		i+=5;
+	}
+	public void Change(Double d)
+	{
+		d+=5.5;
+	}
+	public void change(ArrayList<Integer> list)
+	{
+		list.add(3);
+	}
+	public void change(int[] ar)
+	{
+		ar[2]=3;
+	}
+	public void change(String st)
+	{
+		st+="RS";
+	}
+	public void change(String[] array)
+	{
+		array[2]="abarna";
+	}
+	public static void main(String [] args){
+		AssignmentTwo object=new AssignmentTwo();
+		System.out.println("\nParent class:"+object.getClass().getSuperclass().toString());//Parent class of AssignmentTwo
+		Properties property = System.getProperties(); 
+		System.out.println("\n");
+        property.list(System.out);//listing out System properties
+		int i=new Integer(5);
+		double d=6.5;
+		Float f=new Float(10000.878857);
+		String st="jayanth";
+		String[] array=new String[3];
+		array[0]="jayanth";
+		array[1]="bala";
+		int[] ar=new int[3];
+		ar[0]=1;
+		ar[1]=2;
+		ArrayList<Integer> list=new ArrayList<Integer>();
+		list.add(1);
+		list.add(2);
+		System.out.println("\n\nconverting float "+f);//changing float to other types
+		System.out.println("to Integer: "+(f.intValue()));
+		System.out.println("to Double: "+(f.doubleValue()));
+		System.out.println("to byte: "+(f.byteValue()));
+		System.out.println("to short: "+(f.shortValue()));
+		System.out.println("to long: "+(f.longValue()));
+		System.out.println("\n\nValues before function object");//fuction call and overloading
+		System.out.println("int value : "+i);
+		System.out.println("Double value : "+d);
+		System.out.println("ArrayList elements:");
+		for(Integer it:list)
+			System.out.println(it);
+	    System.out.println("Array elements:");
+		for(Integer it:ar)
+			System.out.println(it);
+		System.out.println("String: "+st);
+		System.out.println("String array elements:");
+		for(String it:array)
+			System.out.println(it);
+		System.out.println("\nValues After function object");
+		object.Change(i);
+		System.out.println("int value : "+i);
+		object.Change(d);
+		System.out.println("Double value : "+d);
+		System.out.println("ArrayList elements:");
+		object.change(list);
+		for(Integer it:list)
+			System.out.println(it);
+	    System.out.println("Array elements:");
+		object.change(ar);
+		for(Integer it:ar)
+			System.out.println(it);
+		object.change(st);
+		System.out.println("String: "+st);
+		System.out.println("String array elements:");
+		object.change(array);
+		for(String it:array)
+			System.out.println(it);
+	}
+}
