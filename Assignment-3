@@ -1,0 +1,66 @@
+import java.util.Scanner;
+import java.util.StringTokenizer;
+import java.util.Date;
+import java.sql.Time;
+import java.text.SimpleDateFormat;
+public class AssignmentThree
+{
+	public static void main(String [] args){
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the string");
+		{
+		String input=s.nextLine();
+		System.out.println("Enter the substring");
+		String substring=s.nextLine();
+		int k=0,count=0;
+		while(k<input.length())
+		{
+		  int j=input.indexOf(substring,k);
+		  if(j>=0)
+		  {
+		  count++;
+		  k=j+1;
+		  }
+		  else 
+		  break;
+		 }
+		System.out.println("Occurence of substring is:"+count);
+		input=input.replaceAll("\\d","");
+		System.out.println("After removing numbers: "+input); 
+		input=input.replaceAll(substring,"");
+		System.out.println("After removing substring: "+input); 
+		System.out.println("Enter a character");
+		char c=s.nextLine().charAt(0);
+		System.out.println("Enter a character to replace");
+		char d=s.nextLine().charAt(0);
+		input=input.replace(c,d);
+		System.out.println("After replacing character: "+input); 
+		System.out.println("Enter substring");
+		String substringreplace=s.nextLine();
+		System.out.println("Enter substring to replace");
+		String replace=s.nextLine();
+		input=input.replaceAll(substringreplace,replace);
+		System.out.println("After replacing substring: "+input);
+		System.out.println("Enter the delimeter");
+		String delimeter=s.nextLine();
+		String[] array=input.split(delimeter);
+		for(String i:array)
+		System.out.println(i);
+		StringTokenizer token=new StringTokenizer(input,delimeter);
+		while(token.hasMoreTokens())
+		System.out.println(token.nextToken());
+		SimpleDateFormat formatDate= new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		Date date = new Date();
+		System.out.println(formatDate.format(date));
+		System.out.println("Enter time(HH:mm:ss)");
+		String time=s.nextLine();
+		formatDate= new SimpleDateFormat("HH:mm:ss");
+		date = new Date();
+		if(Time.valueOf(time).before(Time.valueOf(formatDate.format(date).toString())))
+		System.out.println(time+" is lesser than current time");
+		else
+		System.out.println(time+" is greater than current time");
+		}
+		//System.out.println(input);//remove comment compile error(out of scope)
+	}
+}
