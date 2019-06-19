@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Check{
+	public static void main(String args[]){
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter a character");
+		char input=s.nextLine().charAt(0);
+		if(input<='9'&&input>='0')
+			System.out.println("The character "+input+" is a number");
+		else if(input<='Z'&&input>='A')
+			System.out.println("The character "+input+" is a uppercase");
+		else if(input<='z'&&input>='a')
+			System.out.println("The character "+input+" is a lowercase");
+		else
+			System.out.println("The character "+input+" is a specialcharacter");
+	}
+}
