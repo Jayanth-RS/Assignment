@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Ascending{
+	public static void main(String[] args){
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the Size of array");
+		int size=s.nextInt(),i=0,j=0;
+		int[] array=new int[size];
+		for(i=0;i<size;i++)
+			array[i]=s.nextInt();
+		for(i=0;i<size-1;i++)
+		{
+			for(j=i+1;j<size;j++)
+			{
+			   if(array[i]>array[j])
+			   {
+				 int t=array[i];
+				 array[i]=array[j];
+				 array[j]=t;
+			   }
+		    }
+		}
+		System.out.println("Ascending order");
+		for(i=0;i<size;i++)
+			System.out.print(array[i]+" ");
+	}
+}
