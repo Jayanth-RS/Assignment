@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Reverse{
+	public static void main (String[] args){
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the string");
+		String input=s.nextLine();
+		String copy=input;
+		System.out.println("Copied String is:"+copy);
+		System.out.println("Concatened String is:"+(copy+"jayanth"));
+		int i=input.length()-1,j=0;
+		boolean isEqual=true;
+		while(j<(int)input.length()/2)
+		{
+			if(input.toLowerCase().charAt(i)!=input.toLowerCase().charAt(j))
+			{
+				isEqual=false;
+				break;
+			}
+			j++;
+			i--;			
+		}
+		if(isEqual)
+			System.out.println("The string :"+input+" is a pallindrome");
+		else
+			System.out.println("The string :"+input+" is not a pallindrome");		
+	}
+}
