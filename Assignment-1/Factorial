@@ -1,12 +1,12 @@
 import java.util.Scanner;
 public class Factorial{
-		public static void main(String [] args){
-		Scanner s=new Scanner(System.in);
-		System.out.println("enter the number");
-		int number=s.nextInt(),sum=1,i;
-		Factorial fact=new Factorial();
-		for(i=1;i<=number;i++)
-		sum*=i;
-		System.out.println("Factorial of "+number+"is:"+sum);
-	}
+  public static void main(String [] args){
+  Scanner s=new Scanner(System.in);
+  System.out.println("enter the number");
+  int number=s.nextInt(),sum=1,i;
+  Factorial fact=new Factorial();
+  for(i=1;i<=number;i++)
+    sum*=i;
+  System.out.println("Factorial of "+number+"is:"+sum);
+  }
 }
