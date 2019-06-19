@@ -1,0 +1,13 @@
+import java.util.Scanner;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+public class Length{
+	public static void main(String[] args){
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the string");
+		Pattern p=Pattern.compile("$");
+		Matcher m=p.matcher(s.nextLine());
+	    while(m.find())
+	   	System.out.println("The length of String is: "+m.end());
+	}
+}
