@@ -1,4 +1,5 @@
 import java.util.*;
+
 public class AssignmentTwo{
 	public void Change(int i)
 	{
