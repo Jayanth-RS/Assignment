@@ -1,16 +1,16 @@
 import java.util.Scanner;
 public class BiggestNumber{
-	public static void main(String[] args){
-		Scanner s=new Scanner(System.in);
-		System.out.println("Enter the Size of array");
-		int size=s.nextInt(),i=0,j=0;
-		int[] array=new int[size];
-		for(i=0;i<size;i++)
-		{
-		array[i]=s.nextInt();
-		if(j<=array[i])
-		j=array[i];
-		}
-		System.out.println("Biggest Element is:"+j);
-	}
+public static void main(String[] args){
+Scanner s=new Scanner(System.in);
+System.out.println("Enter the Size of array");
+int size=s.nextInt(),i=0,j=0;
+int[] array=new int[size];
+for(i=0;i<size;i++)
+{
+ array[i]=s.nextInt();
+ if(j<=array[i])
+ j=array[i];
+}
+System.out.println("Biggest Element is:"+j);
+}
 }
